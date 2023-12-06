@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ERentavTestHelper {
-	public static String driverPath = "chromedriver.exe";
-	public static WebDriver driver;
+	private static String driverPath = "chromedriver.exe";
+	private static WebDriver driver;
 	
 	public static void setup(String link) throws InterruptedException{
 		System.out.println("Iniciando suíte de testes.");
@@ -27,4 +27,20 @@ public class ERentavTestHelper {
 	public static void tearDown(){
 		driver.quit();
 	}
+	
+	public static boolean hasClass(WebElement element, String className){
+	    String classes = element.getAttribute("class");
+	    for (String c : classes.split(" ")) {
+	        if (c.equals(className)) {
+	            return true;
+	        }
+	    }
+	    
+	    return false;
+	}
+	
+	public static WebDriver getDriver(){
+		return driver;
+	}
+	
 }
