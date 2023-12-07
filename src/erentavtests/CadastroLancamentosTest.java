@@ -25,13 +25,13 @@ public class CadastroLancamentosTest {
             WebElement tipo = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"operation\"]/div[1]/div/div[1]/div/div/div/input"));
             tipo.click();
             Thread.sleep(500);
-            WebElement tipoDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"leftMenu\"]/div[3]/div[1]/div[1]/ul/li[1]"));
+            WebElement tipoDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/ul/li[1]"));
             tipoDropDown.click();
 
             WebElement conta = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"operation\"]/div[1]/div/div[2]/div/div/div/input"));
             conta.click();
             Thread.sleep(500);
-            WebElement contaDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"leftMenu\"]/div[4]/div[1]/div[1]/ul/li[2]"));
+            WebElement contaDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/ul/li[3]"));
             contaDropDown.click();
 
             WebElement descricao = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"description\"]"));
@@ -61,19 +61,19 @@ public class CadastroLancamentosTest {
             WebElement tataAdmin = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"operation\"]/div[1]/div/div[11]/div/input"));
             tataAdmin.sendKeys("54321");
 
-            WebElement strike = ERentavTestHelper.getDriver().findElement(By.id("//*[@id=\"strike_price\"]"));
+            WebElement strike = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"strike_price\"]"));
             strike.sendKeys("40000");
 
             WebElement posicao = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"operation\"]/div[1]/div/div[13]/div/div/div[1]/input"));
             posicao.click();
             Thread.sleep(500);
-            WebElement posicaoDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"leftMenu\"]/div[5]/div[1]/div[1]/ul/li[1]"));
+            WebElement posicaoDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("/html/body/div[4]/div[1]/div[1]/ul/li[2]"));
             posicaoDropDown.click();
 
             WebElement callPut = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"operation\"]/div[1]/div/div[14]/div/div/div[1]/input"));
             callPut.click();
             Thread.sleep(500);
-            WebElement callPutDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"leftMenu\"]/div[6]/div[1]/div[1]/ul/li[3]"));
+            WebElement callPutDropDown = ERentavTestHelper.getDriver().findElement(By.xpath("/html/body/div[5]/div[1]/div[1]/ul/li[2]"));
             callPutDropDown.click();
 
             WebElement numOrdem = ERentavTestHelper.getDriver().findElement(By.xpath("//*[@id=\"order\"]"));
@@ -84,7 +84,7 @@ public class CadastroLancamentosTest {
 
             Thread.sleep(2000);
 
-            WebElement log = ERentavTestHelper.getDriver().findElement(By.xpath("/div/span[2]/span"));
+            WebElement log = ERentavTestHelper.getDriver().findElement(By.xpath("/html/body/div/div/div[2]/div/div[2]/span/div"));
 
             assertFalse(ERentavTestHelper.hasClass(log, "alert-danger"));
         }
