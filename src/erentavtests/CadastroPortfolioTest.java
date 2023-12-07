@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class CadastroPortfolioTest {	
 	@Before
@@ -86,17 +85,3 @@ public class CadastroPortfolioTest {
 		assertFalse(ERentavTestHelper.hasClass(error, "alert-danger"));
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
